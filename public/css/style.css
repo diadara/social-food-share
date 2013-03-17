@@ -1,0 +1,36 @@
+
+
+#hungry {
+	
+	
+	
+	
+}
+
+.form-search {
+    position: relative;
+}
+
+.form-search .search-query {
+    padding-left: 29px !important;
+}
+
+.form-search .icon-search {
+    position: absolute;
+    top: 7px;
+    left: 11px;
+    background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings.png");
+}
+
+#map{
+height:100%;}
+#map-canvas {height:300px;;
+    margin:0;
+max-width:none;
+}
+
+img{max-width:none;}
+
+.top {
+	padding-bottom:50px;
+}

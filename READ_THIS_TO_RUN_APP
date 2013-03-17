@@ -1,0 +1,22 @@
+App require rails 1.9.3 
+It can be run with following commands in a terminal from this folder
+
+#########################
+bundle install
+rake db:migrate
+rails s
+visit localhost:3000
+########################
+
+This app stores information about extrafood users are willing to share with others
+and geo tags them so that others can easily find the people sharing food by going
+into their profile
+PS:1 Add Left over food (I COOKED BUTTON)
+2 add your location(My location Button)
+3 Hit I'M HUNGRY button
+select user from the list to see location on the map
+
+
+
+do contact us if you are not able to run this on your machine
+

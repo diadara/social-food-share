@@ -1,0 +1,65 @@
+<% content_for :head do %>
+<!-- <script src="http://code.jquery.com/jquery.js"></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+	$(document).ready(function() {
+		$("#lon").hide();
+		$("#lat").hide();
+	}); 
+</script>
+
+<style>
+	body {
+		padding-top: 20px;
+		padding-bottom: 60px;
+	}
+
+	html, body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
+	#map {
+		height: 100%;
+	}
+	#map-canvas {
+		height: 300px;
+		margin: 0;
+		max-width: none;
+	}
+	img {
+		max-width: none;
+	}
+	navbar {
+		margin: 0;
+	}
+
+	#mark {
+		z-index: 1000;
+		height: 300px;
+		width: 300px;
+		background-color: #66c842;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+</style>
+<% end %>
+<div id="map">
+	<div id="map-canvas"></div>
+</div>
+<div id="mark">
+	<div id="posit"></div>
+	<input type="text" id="search_address" value=""/>
+	<div id="spo"></div>
+	<button onclick="search();">
+		Search
+	</button>
+	<%= form_tag edit_location_path do %>
+	<input type="text" name="lattitude" id="lat"/>
+	<input type="text" name="longitude" id="lon"/>
+	<input type="submit" name="submit" value="Submit This Location" />
+	<% end %>
+</div>
+
+<script src="/js/script.js" type="text/javascript" charset="utf-8"></script>

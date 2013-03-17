@@ -1,0 +1,35 @@
+<%= content_for :head do %> <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<% end %>
+<legend>
+	<%= @user.name || "(no name given)" %> (<%= link_to 'Edit', edit_user_path(@user), :class => "btn btn-mini btn-success" %>)
+</legend>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Serves</th>
+			<th>Good Before</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @user.leftovers.each do |leftover| %>
+		<tr>
+
+			<td><%= leftover.name %></td>
+			<td><%= leftover.serving_size %></td>
+			<td><%= leftover.expires_at %> </td>
+			<td><%= link_to 'Show', leftover_url(leftover), :class => "btn btn-mini btn-info" %> <%= link_to 'Edit', edit_leftover_url(leftover), :class => "btn btn-mini" %> </td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<script src="/js/script.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(document).ready(function(){var newcen = new google.maps.LatLng(<%= @user.lattitude %>,<%= @user.longitude %>
+	);
+	map.setCenter(newcen);
+	marker.setPosition(newcen);
+	});
+
+</script>

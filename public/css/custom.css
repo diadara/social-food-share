@@ -1,0 +1,28 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+html,body{margin:0;
+padding:0;
+height: 100%;}
+#map{
+height:100%;}
+#map-canvas {height:100%;
+    margin:0;
+max-width:none;}
+img{max-width:none;}
+navbar{
+margin:0;}
+
+#mark{
+z-index:1000;
+height:300px;
+width:300px;
+background-color:#66c842;
+position:absolute;
+bottom:0;
+left:0;
+
+
+}
